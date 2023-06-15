@@ -26,6 +26,7 @@ pipeline {
             steps {
                 echo "Deploying.."
                 sh '''
+                pwd
                 ./run/start.sh
                 '''
             }
