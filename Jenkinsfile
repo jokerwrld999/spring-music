@@ -20,6 +20,7 @@ pipeline {
                 sh '''
                 echo "doing build stuff.."
                 pwd
+                ls -la
                 '''
             }
         }
