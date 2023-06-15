@@ -1,7 +1,7 @@
 pipeline {
     agent {
         node {
-            label 'jenkins-agent-goes-here'
+            label 'ubuntu-slave1'
             }
       }
     stages {
