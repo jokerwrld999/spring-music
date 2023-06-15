@@ -5,6 +5,15 @@ pipeline {
             }
       }
     stages {
+        stage('Checkout Project..') {
+            steps {
+                git branch: 'master',
+                    credentialsId: 'github_cred',
+                    url: 'git@github.com:jokerwrld999/spring-music.git'
+
+                sh "ls -lat"
+            }
+    }
         stage('Build') {
             steps {
                 echo "Building.."
