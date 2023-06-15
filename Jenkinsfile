@@ -18,9 +18,15 @@ pipeline {
             steps {
                 echo "Building.."
                 sh '''
-                echo "doing build stuff.."
-                pwd
-                ls -la
+                ./gradlew clean assemble
+                '''
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo "Deploying.."
+                sh '''
+                ./run/start.sh
                 '''
             }
         }
@@ -28,7 +34,7 @@ pipeline {
             steps {
                 echo "Testing.."
                 sh '''
-                echo "doing test stuff.."
+                curl -I https://spring-music.com
                 '''
             }
         }
