@@ -35,7 +35,7 @@ pipeline {
             steps {
                 echo "Testing.."
                 sh '''
-                ./custom-configs/test.sh
+                ./custom-configs/test/test.sh
                 '''
             }
         }
