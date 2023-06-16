@@ -5,6 +5,6 @@ RESPONSE=$(wget --server-response https://spring-music.com/ --no-check-certifica
 if [ $RESPONSE = 200 ]; then
     echo "Spring-music Application is UP"
 else
-    echo "Got error spring-music Application is DOWN :("
+    echo "Got error $RESPONSE. Spring-music Application is DOWN :("
     exit 1
 fi
