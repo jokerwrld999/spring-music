@@ -28,6 +28,7 @@ pipeline {
                 sh '''
                 export SRC=$(pwd)
                 ./custom-configs/deployment/deploy.sh
+                sleep 10
                 '''
             }
         }
