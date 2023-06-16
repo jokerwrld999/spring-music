@@ -1,3 +1,6 @@
 #!/bin/bash
-kill $(cat ./pid1.file)
+
+WORKING_DIR=$(echo $HOME/spring-music-app/)
+
+kill $(cat $WORKING_DIR/pid1.file)
 #kill $(cat ./pid2.file)
