@@ -7,7 +7,7 @@ Type=simple
 User=jokerwrld
 WorkingDirectory=/home/jokerwrld/spring-music-app
 ExecStart=/bin/bash /spring-music-service/start.sh
-ExecSop=/bin/bash /spring-music-service/stop.sh
+ExecStop=/bin/bash /spring-music-service/stop.sh
 Restart=always
 RestartSec=1
 
