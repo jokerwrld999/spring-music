@@ -1,3 +1,5 @@
+#!/bin/bash
+
 RESPONSE=$(wget --server-response https://spring-music.com/ --no-check-certificate 2>&1 | awk '/HTTP\// {print $2}')
 
 if [ $RESPONSE = 200 ]; then
