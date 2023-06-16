@@ -5,8 +5,9 @@ After=network.target
 [Service]
 Type=simple
 User=jokerwrld
-ExecStart=/bin/bash /xxx/yyy/start.sh
-ExecSop=/bin/bash /xxx/yyy/stop.sh
+WorkingDirectory=$HOME/spring-music-app
+ExecStart=/bin/bash /spring-music-service/start.sh
+ExecSop=/bin/bash /spring-music-service/stop.sh
 Restart=always
 RestartSec=1
 
