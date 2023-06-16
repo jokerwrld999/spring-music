@@ -4,9 +4,19 @@ After=network.target
 
 [Service]
 Type=simple
+ExecStart=/usr/bin/java -jar -Dserver.port=8090 -Dspring.profiles.active=mongodb /home/jokerwrld/spring-music-app/spring-music-1.0.jar
 User=jokerwrld
-ExecStart=/home/jokerwrld/spring-music-app/spring-music-service/start.sh
 Restart=always
 
+# Note: Sending a SIGINT (as in CTRL-C) results in an exit code of 130 (which is normal)
+KillMode=process
+KillSignal=SIGINT
+SuccessExitStatus=130
+TimeoutStopSec=10
+
+StandardOutput=journal
+StandardError=journal
+
 [Install]
+
 WantedBy=multi-user.target
