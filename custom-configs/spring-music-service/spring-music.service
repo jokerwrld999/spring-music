@@ -6,7 +6,6 @@ After=network.target
 Type=simple
 User=jokerwrld
 ExecStart=/home/jokerwrld/spring-music-app/spring-music-service/start.sh
-ExecStop=/home/jokerwrld/spring-music-app/spring-music-service/stop.sh
 Restart=always
 
 [Install]
