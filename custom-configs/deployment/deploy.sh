@@ -7,6 +7,7 @@ echo "  ----- setup base directory -----  "
 mkdir $APP_DIR
 yes | cp -rf $ARTIFACT $APP_DIR/
 yes | cp -rf $SRC/custom-configs/spring-music-service $APP_DIR/
+sudo chmod 500 $APP_DIR/$ARTIFACT
 
 echo "  ----- copy unit file for application -----  "
 sudo mv -f $SRC/custom-configs/spring-music-service/spring-music.service /etc/systemd/system/spring-music.service
