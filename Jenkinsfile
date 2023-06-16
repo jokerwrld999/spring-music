@@ -31,21 +31,13 @@ pipeline {
                 '''
             }
         }
-        /*stage('Test') {
+        stage('Test') {
             steps {
                 echo "Testing.."
                 sh '''
-                curl -I https://spring-music.com
+                ./custom-configs/test.sh
                 '''
             }
         }
-        stage('Deliver') {
-            steps {
-                echo 'Deliver....'
-                sh '''
-                echo "doing delivery stuff.."
-                '''
-            }
-        }*/
     }
 }

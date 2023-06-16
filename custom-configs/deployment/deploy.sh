@@ -12,4 +12,5 @@ echo "  ----- copy unit file for application -----  "
 sudo mv -f $SRC/custom-configs/spring-music-service/spring-music.service /etc/systemd/system/spring-music.service
 
 echo "  ----- start the application -----  "
-sudo systemctl enable --now spring-music
+#sudo systemctl enable --now spring-music
+sudo systemctl stop spring-music
