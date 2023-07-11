@@ -27,7 +27,7 @@ pipeline {
                 echo "Deploying.."
                 sh '''
                 docker run -d -p 8080:8080 --name spring-music spring-music:latest
-                sleep 10
+                sleep 30
                 '''
             }
         }
