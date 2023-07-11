@@ -18,7 +18,7 @@ pipeline {
             steps {
                 echo "Building.."
                 sh '''
-                docker build -t spring-music .
+                ./gradlew clean assemble
                 '''
             }
         }
@@ -26,7 +26,8 @@ pipeline {
             steps {
                 echo "Deploying.."
                 sh '''
-                docker run -d -p 8080:8080 --name spring-music spring-music:latest
+                export SRC=$(pwd)
+                ./custom-configs/deployment/deploy.sh
                 sleep 10
                 '''
             }
