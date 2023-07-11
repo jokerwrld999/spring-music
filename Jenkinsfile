@@ -18,9 +18,9 @@ pipeline {
             steps {
                 echo "Cleaning up.."
                 sh '''
-                docker stop $(docker ps -a -q)
-                docker rm $(docker ps -a -q)
-                docker rmi -f $(docker images -aq) 
+                docker stop $(docker ps -a -q) || true
+                docker rm $(docker ps -a -q) || true
+                docker rmi -f $(docker images -aq) || true
                 '''
             }
         }
