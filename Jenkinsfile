@@ -28,7 +28,6 @@ pipeline {
             steps {
                 echo "Building.."
                 sh '''
-                docker rmi -f $(docker images -aq) 
                 docker build -t spring-music .
                 '''
             }
